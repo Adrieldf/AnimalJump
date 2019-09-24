@@ -14,6 +14,8 @@ public class LevelGenerator : MonoBehaviour
     private GameObject coinPrefab = null;
     [SerializeField]
     private float levelWidth = 3f;
+    [SerializeField]
+    private GameObject spikePrafab = null;
     private int tamMinY = 0;
     private int tamMaxY = 0;
     private int spawnAmount = 0;
@@ -22,6 +24,7 @@ public class LevelGenerator : MonoBehaviour
     private int spawnChance = 0;
     private int maxDiffBetweenSpawns = 0;
     private int spawnCoinChance = 20;
+    private int spawnSpikeChance = 40;
     void Start()
     {
         spawnChunk();
@@ -65,6 +68,10 @@ public class LevelGenerator : MonoBehaviour
             {
                 Instantiate(coinPrefab, spawnPos, Quaternion.identity);
             }
+            else if (Random.Range(0, spawnSpikeChance) == 0)
+            {
+                Instantiate(spikePrafab, spawnPos, Quaternion.identity);
+            }
             #endregion
         }
         void spawnInstantiator()
@@ -86,6 +93,7 @@ public class LevelGenerator : MonoBehaviour
             maxDiffBetweenSpawns = 5;
             spawnCount = 0;
             spawnCoinChance = 15;
+            spawnSpikeChance = 40;
         }
         else if (score < 125)
         {
@@ -96,6 +104,7 @@ public class LevelGenerator : MonoBehaviour
             maxDiffBetweenSpawns = 5;
             spawnCount = 0;
             spawnCoinChance = 12;
+            spawnSpikeChance = 35;
         }
         else if (score < 200)
         {
@@ -106,6 +115,7 @@ public class LevelGenerator : MonoBehaviour
             maxDiffBetweenSpawns = 5;
             spawnCount = 0;
             spawnCoinChance = 10;
+            spawnSpikeChance = 30;
         }
         else if (score < 275)
         {
@@ -116,6 +126,7 @@ public class LevelGenerator : MonoBehaviour
             maxDiffBetweenSpawns = 5;
             spawnCount = 0;
             spawnCoinChance = 8;
+            spawnSpikeChance = 25;
         }
         else if (score < 350)
         {
@@ -126,6 +137,7 @@ public class LevelGenerator : MonoBehaviour
             maxDiffBetweenSpawns = 5;
             spawnCount = 0;
             spawnCoinChance = 6;
+            spawnSpikeChance = 20;
         }
         else
         {
@@ -136,6 +148,7 @@ public class LevelGenerator : MonoBehaviour
             maxDiffBetweenSpawns = 5;
             spawnCount = 0;
             spawnCoinChance = 5;
+            spawnSpikeChance = 15;
         }
         #endregion
     }
