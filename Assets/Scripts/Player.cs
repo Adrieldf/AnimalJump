@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     public static Player Instance;
     void Awake() => Instance = this;
-    
+
     #region Stats
     [Header("Player Stats")]
     public int MaxHealth = 3;
@@ -18,13 +18,42 @@ public class Player : MonoBehaviour
     float movement = 0f;
     public Transform gameCamera;
     private bool isDead = false;
+    private Vector2 touchInitPosition = new Vector2();
+    [SerializeField]
+    private Joystick joystick;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
     void Update()
     {
-        movement = Input.GetAxis("Horizontal") * movementSpeed;
+        //joystick control
+        
+        movement = joystick.Horizontal * movementSpeed;
+
+        //touch control
+        //if (Input.touchCount > 0)
+        //{
+        //    Touch touch = Input.touches[0];
+
+        //    if (touch.phase == TouchPhase.Began)
+        //    {
+        //        touchInitPosition = touch.position;
+        //    }
+        //    else
+        //    {
+        //        float distance = Vector2.Distance(touchInitPosition, touch.position);
+        //        Debug.Log(distance);
+        //        if (distance > 10f)
+        //        {
+        //            movement = (touchInitPosition.x > touch.position.x ? -0.5f : 0.5f) * movementSpeed;
+
+        //        }
+
+        //    }
+
+        //}
+        //movement = Input.GetAxis("Horizontal") * movementSpeed;
     }
 
     void FixedUpdate()
