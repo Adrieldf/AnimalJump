@@ -111,6 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f48fe2c88174da9e90ae7a1aa5d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ExplosionEffect: {fileID: 3714229188684856627, guid: 6ede9bc8884f436428b1366bac867cab,
+    type: 3}
 --- !u!95 &2727765296925811707
 Animator:
   serializedVersion: 3

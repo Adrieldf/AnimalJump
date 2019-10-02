@@ -18,44 +18,35 @@ public class Player : MonoBehaviour
     float movement = 0f;
     public Transform gameCamera;
     private bool isDead = false;
-    private Vector2 touchInitPosition = new Vector2();
-    [SerializeField]
-    private Joystick joystick;
+    private float movementInput = 0f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
     void Update()
     {
-        //joystick control
-        
-        movement = joystick.Horizontal * movementSpeed;
+        //Debug.Log(movementInput);
+        movement = movementInput * movementSpeed;
 
-        //touch control
-        //if (Input.touchCount > 0)
-        //{
-        //    Touch touch = Input.touches[0];
-
-        //    if (touch.phase == TouchPhase.Began)
-        //    {
-        //        touchInitPosition = touch.position;
-        //    }
-        //    else
-        //    {
-        //        float distance = Vector2.Distance(touchInitPosition, touch.position);
-        //        Debug.Log(distance);
-        //        if (distance > 10f)
-        //        {
-        //            movement = (touchInitPosition.x > touch.position.x ? -0.5f : 0.5f) * movementSpeed;
-
-        //        }
-
-        //    }
-
-        //}
-        //movement = Input.GetAxis("Horizontal") * movementSpeed;
+        if (Application.platform == RuntimePlatform.WindowsEditor)
+            movement = Input.GetAxis("Horizontal") * movementSpeed;
     }
 
+    public void RightInputClick(bool clickDown)
+    {
+        if (clickDown)
+            movementInput = 1;
+        else
+            movementInput = 0;
+    }
+    public void LeftInputClick(bool clickDown)
+    {
+        if (clickDown)
+            movementInput = -1;
+        else
+            movementInput = 0;
+    }
     void FixedUpdate()
     {
         Vector2 velocity = rb.velocity;
@@ -91,5 +82,10 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void SpikeHit()
+    {
+        CurrentHealth--;
+        GameMasterController.Instance.UpdateLifePanel();
+    }
 }
 

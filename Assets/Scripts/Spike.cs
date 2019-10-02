@@ -5,6 +5,8 @@ using UnityEngine;
 public class Spike : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField]
+    private GameObject ExplosionEffect;
     void Start()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
@@ -14,9 +16,10 @@ public class Spike : MonoBehaviour
     {
         if (!other.CompareTag("Player"))
             return;
-        Debug.Log("spike hit");
-        //spawnar particula
+        Instantiate(ExplosionEffect,gameObject.transform.position, Quaternion.identity);
         GameObject player = other.gameObject;
-        player.GetComponent<Rigidbody2D>().AddForce((transform.position - player.transform.position) * -500);
+        player.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 750);
+        Player.Instance.SpikeHit();
+        Destroy(gameObject);
     }
 }

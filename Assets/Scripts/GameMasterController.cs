@@ -92,11 +92,18 @@ public class GameMasterController : MonoBehaviour
         {
             Destroy(LifeContainer.transform.GetChild(i).gameObject);
         }
-        for (int i = 0; i < Player.Instance.MaxHealth; i++)
+        for (int i = 0; i < Player.Instance.CurrentHealth; i++)
         {
             Instantiate(HeartPrefab, LifeContainer.transform);
         }
     }
+    public void UpdateLifePanel()
+    {
+        //fazer passando um valor e reduzir conforme o valor mas por enquanto faz do jeito feio mesmo e remove e coloca tudo de novo
+        InitLifePanel();
+    }
 
+    public void onClickRightInput(bool clickDown) => Player.Instance.RightInputClick(clickDown);
+    public void onClickLeftInput(bool clickDown) => Player.Instance.LeftInputClick(clickDown);
 
 }
