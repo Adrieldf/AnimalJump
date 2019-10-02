@@ -86,6 +86,18 @@ public class Player : MonoBehaviour
     {
         CurrentHealth--;
         GameMasterController.Instance.UpdateLifePanel();
+        if(CurrentHealth == 0)
+        {
+            Die();
+        }
+    }
+    public bool HeartPickup()
+    {
+        if (CurrentHealth == MaxHealth) return false;
+
+        CurrentHealth++;
+        GameMasterController.Instance.UpdateLifePanel();
+        return true;
     }
 }
 

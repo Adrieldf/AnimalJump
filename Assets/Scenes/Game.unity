@@ -358,6 +358,8 @@ MonoBehaviour:
   levelWidth: 2.75
   spikePrafab: {fileID: 2727765296925811706, guid: 36abf4d66e5e7b747af4e797a326d7cc,
     type: 3}
+  heartPickupPrefab: {fileID: 5063318465266966813, guid: bae0b621e9c73b74783984f2ab13569e,
+    type: 3}
 --- !u!1 &640848957
 GameObject:
   m_ObjectHideFlags: 0
