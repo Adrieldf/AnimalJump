@@ -2471,12 +2471,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2685,26 +2685,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1813378892}
   m_CullTransparentMesh: 0
---- !u!1 &2033638303 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7421588419820526885, guid: 64b3cfa40a1193346ac3feabf27d6a02,
-    type: 3}
-  m_PrefabInstance: {fileID: 7421588419974317754}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2033638307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033638303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c281eb5db9e76d7418efa99263159dd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  JumpParticleEffect: {fileID: 2225520004681191980, guid: 8d74f652aa35da24ab108054d4d05395,
-    type: 3}
 --- !u!1001 &2117927578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3049,24 +3029,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7421588420342121063, guid: 64b3cfa40a1193346ac3feabf27d6a02,
         type: 3}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 519420028}
-    - target: {fileID: 7421588420342121063, guid: 64b3cfa40a1193346ac3feabf27d6a02,
-        type: 3}
       propertyPath: gameCamera
       value: 
       objectReference: {fileID: 519420032}
-    - target: {fileID: 7421588420342121063, guid: 64b3cfa40a1193346ac3feabf27d6a02,
-        type: 3}
-      propertyPath: joystick
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7421588420342121063, guid: 64b3cfa40a1193346ac3feabf27d6a02,
-        type: 3}
-      propertyPath: movementSpeed
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64b3cfa40a1193346ac3feabf27d6a02, type: 3}
 --- !u!1001 &8626959788155179883

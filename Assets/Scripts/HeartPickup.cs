@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HeartPickup : MonoBehaviour
 {
-    void Update()
+    void Start()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
     }

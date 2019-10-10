@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
         //Debug.Log(movementInput);
         movement = movementInput * movementSpeed;
 
-        if (Application.platform == RuntimePlatform.WindowsEditor)
+        if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.WebGLPlayer)
             movement = Input.GetAxis("Horizontal") * movementSpeed;
     }
 
@@ -94,7 +94,7 @@ public class Player : MonoBehaviour
     public bool HeartPickup()
     {
         if (CurrentHealth == MaxHealth) return false;
-
+        Debug.Log("pickup");
         CurrentHealth++;
         GameMasterController.Instance.UpdateLifePanel();
         return true;
