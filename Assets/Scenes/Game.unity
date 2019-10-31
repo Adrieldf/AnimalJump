@@ -729,7 +729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1567,6 +1567,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1396680177}
     m_Modifications:
+    - target: {fileID: 2245668286750868876, guid: 384ef1b6c2126f149b6ac2fc51bfad2a,
+        type: 3}
+      propertyPath: m_Name
+      value: Heart
+      objectReference: {fileID: 0}
     - target: {fileID: 2245668286750868877, guid: 384ef1b6c2126f149b6ac2fc51bfad2a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1671,11 +1676,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2245668286750868876, guid: 384ef1b6c2126f149b6ac2fc51bfad2a,
-        type: 3}
-      propertyPath: m_Name
-      value: Heart
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 384ef1b6c2126f149b6ac2fc51bfad2a, type: 3}
@@ -1821,7 +1821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -2832,6 +2832,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 74357364130624185, guid: 10693601d1e1d164ca4358322d947c1a,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1474575543550446743, guid: 10693601d1e1d164ca4358322d947c1a,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -2967,6 +2972,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7421588420342121059, guid: 64b3cfa40a1193346ac3feabf27d6a02,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7421588420342121062, guid: 64b3cfa40a1193346ac3feabf27d6a02,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3021,11 +3031,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7421588420342121059, guid: 64b3cfa40a1193346ac3feabf27d6a02,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7421588420342121063, guid: 64b3cfa40a1193346ac3feabf27d6a02,
         type: 3}
@@ -3180,6 +3185,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 74357364130624185, guid: 10693601d1e1d164ca4358322d947c1a,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5268468590537157692, guid: 10693601d1e1d164ca4358322d947c1a,
         type: 3}

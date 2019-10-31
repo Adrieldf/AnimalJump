@@ -7,8 +7,12 @@ public class Platform : MonoBehaviour
     public float jumpForce = 10f;
     private SpriteRenderer sprite;
     private bool isBoosted = false;
+    [SerializeField]
+    private Animator animator;
+
     private void Start()
     {
+        animator.enabled = false;
         sprite = GetComponent<SpriteRenderer>();
         
         if (Random.Range(0, 5) == 1)
